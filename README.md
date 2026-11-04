@@ -33,8 +33,8 @@ retrieved guidance are fully deterministic; a key only enables the
 natural-language wording.
 
 ```bash
-git clone https://github.com/[your-username]/cyber-risk-assistant.git
-cd cyber-risk-assistant
+git clone https://github.com/keshav-077/Cyber-Risk-Assistant.git
+cd Cyber-Risk-Assistant
 
 make setup     # virtual environment, dependencies, reference data, index
 make run       # http://localhost:8000
