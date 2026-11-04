@@ -1,0 +1,119 @@
+# ---------------------------------------------------------------------------
+# Secrets & credentials  -- never commit
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+credentials.json
+service-account*.json
+*.token
+.netrc
+
+# ---------------------------------------------------------------------------
+# Generated data & artefacts
+# ---------------------------------------------------------------------------
+data/processed/*
+data/outputs/*
+!data/**/.gitkeep
+*.faiss
+*.index
+*.pkl
+*.joblib
+
+# Reference corpora are committed so that a clone runs with no network access
+# and every run is reproducible against a known snapshot. Both sources are
+# public domain works of the US government. Refresh with
+# scripts/fetch_reference_data.py; the manifest records what was retrieved.
+data/reference/*
+!data/reference/.gitkeep
+!data/reference/README.md
+!data/reference/manifest.json
+!data/reference/kev_catalogue.json
+!data/reference/nist_sp800_53_controls.json
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+/build/
+/develop-eggs/
+/dist/
+eggs/
+.eggs/
+sdist/
+/wheels/
+*.egg-info/
+*.egg
+MANIFEST
+.installed.cfg
+
+# Environments
+.venv/
+venv/
+/env/
+/ENV/
+.python-version
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.dmypy.json
+.tox/
+.nox/
+.hypothesis/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.cache
+
+# ---------------------------------------------------------------------------
+# Models / embedding caches (large binaries)
+# ---------------------------------------------------------------------------
+/.cache/
+/models/
+.fastembed_cache/
+.huggingface/
+*.onnx
+*.gguf
+*.safetensors
+
+# ---------------------------------------------------------------------------
+# Logs & runtime
+# ---------------------------------------------------------------------------
+/logs/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+celerybeat-schedule
+
+# ---------------------------------------------------------------------------
+# Editors & OS
+# ---------------------------------------------------------------------------
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# Assessment source material -- must never be published
+# ---------------------------------------------------------------------------
+*.docx
+*.doc
